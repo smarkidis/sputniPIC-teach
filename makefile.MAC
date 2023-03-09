@@ -1,0 +1,14 @@
+CPP = /usr/local/opt/llvm/bin/clang++
+OPTFLAGS= -L/usr/local/Cellar/llvm/9.0.0_1/lib -fopenmp -O3 -mcpu=apple-m1 -ffast-math -fsave-optimization-record -Rpass=loop-vectorize -gline-tables-only -gcolumn-info
+
+sputniPIC: sputniPIC.cpp ConfigFile.o 
+	${CPP} ${OPTFLAGS} -o sputniPIC	sputniPIC.cpp ConfigFile.o 
+
+sputniPIC.o: sputniPIC.cpp
+	${CPP} ${OPTFLAGS} -c sputniPIC.cpp
+
+ConfigFile.o: ConfigFile.cpp
+	${CPP} ${OPTFLAGS} -c ConfigFile.cpp
+
+clean:
+	rm -rf *.o sputniPIC

@@ -1,0 +1,37 @@
+-----------------------------
+- sputniPIC Sim. Parameters -
+-----------------------------
+
+Number of species    = 4
+Number of particles of species 0 = 524288	 (MAX = 524288)  QOM = -64
+Number of particles of species 1 = 524288	 (MAX = 524288)  QOM = 1
+Number of particles of species 2 = 524288	 (MAX = 524288)  QOM = -64
+Number of particles of species 3 = 524288	 (MAX = 524288)  QOM = 1
+---------------------------
+x-Length                 = 40
+y-Length                 = 20
+z-Length                 = 1
+Number of cells (x)      = 128
+Number of cells (y)      = 64
+Number of cells (z)      = 1
+---------------------------
+Time step                = 0.25
+Number of cycles         = 3000
+---------------------------
+rho init species 0 = 1
+rho init species 1 = 1
+rho init species 2 = 0.02
+rho init species 3 = 0.02
+current sheet thickness  = 0.5
+B0x                      = 0.0195
+BOy                      = 0
+B0z                      = 0
+---------------------------
+Smooth ON                = 1
+GMRES error tolerance    = 0.001
+CG error tolerance       = 0.001
+Mover error tolerance    = 3
+---------------------------
+Results saved in: data
+Restart saved in: data
+---------------------

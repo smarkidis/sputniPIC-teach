@@ -1,0 +1,265 @@
+/usr/local/opt/llvm/bin/clang++ -L/usr/local/Cellar/llvm/9.0.0_1/lib -fopenmp -O3 -march=native -ffast-math -fsave-optimization-record -Rpass=loop-vectorize -gline-tables-only -gcolumn-info -c ConfigFile.cpp
+clang-9: warning: argument unused during compilation: '-L/usr/local/Cellar/llvm/9.0.0_1/lib' [-Wunused-command-line-argument]
+/usr/local/opt/llvm/bin/clang++ -L/usr/local/Cellar/llvm/9.0.0_1/lib -fopenmp -O3 -march=native -ffast-math -fsave-optimization-record -Rpass=loop-vectorize -gline-tables-only -gcolumn-info -o sputniPIC	sputniPIC.cpp ConfigFile.o 
+In file included from sputniPIC.cpp:40:
+./RW_IO.h:190:5: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+    for (int i = 0; i < param->ns; i++) {
+    ^
+In file included from sputniPIC.cpp:11:
+./Grid.h:110:13: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+            for (int k = 0; k < grd->nzn; k++) {
+            ^
+In file included from sputniPIC.cpp:15:
+In file included from ./InterpDens_aux.h:4:
+In file included from ./Smoothing.h:4:
+./BC.h:24:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < grd->nzn-1; k++){
+            ^
+./BC.h:33:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < grd->nzn - 1; k++){
+            ^
+./BC.h:107:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 0; k < grd->nzn; k++){
+            ^
+./BC.h:116:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 0; k < grd->nzn; k++){
+            ^
+In file included from sputniPIC.cpp:26:
+./MaxwellSolver.h:534:13: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+            for ( int k = 0; k < nzn; k++){
+            ^
+./MaxwellSolver.h:622:13: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+            for ( int k = 0; k < nzc; k++)
+            ^
+./MaxwellSolver.h:448:13: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+            for (int k = 0; k < nzn; k++){
+            ^
+./MaxwellSolver.h:460:13: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+            for (int k = 0; k < nzc; k++){
+            ^
+In file included from sputniPIC.cpp:26:
+In file included from ./MaxwellSolver.h:4:
+./TransArraySpace3D.h:28:9: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+        for ( int k=1; k < nz-1; k++)
+        ^
+./TransArraySpace3D.h:8:9: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+        for ( int k=1; k < nz-1; k++)
+        ^
+./TransArraySpace3D.h:16:9: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+        for ( int k=1; k < nz-1; k++){
+        ^
+In file included from sputniPIC.cpp:11:
+./Grid.h:151:13: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+            for (int k = 1; k < grd->nzc-1; k++){
+            ^
+In file included from sputniPIC.cpp:13:
+./InterpDensSpecies.h:81:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < grd->nzc - 1; k++){
+            ^
+In file included from sputniPIC.cpp:14:
+./InterpDensNet.h:71:13: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+            for (int k = 0; k < grd->nzn; k++){
+            ^
+./InterpDensNet.h:107:17: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+                for (int k = 0; k < grd->nzn; k++){
+                ^
+In file included from sputniPIC.cpp:11:
+./Grid.h:208:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for (int k = 1; k < nzc-1; k++)
+            ^
+In file included from sputniPIC.cpp:15:
+In file included from ./InterpDens_aux.h:4:
+In file included from ./Smoothing.h:4:
+./BC.h:680:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < grd->nzc-1; k++){
+            ^
+./BC.h:689:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < grd->nzc - 1; k++){
+            ^
+./BC.h:763:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 0; k < grd->nzc; k++){
+            ^
+./BC.h:772:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 0; k < grd->nzc; k++){
+            ^
+In file included from sputniPIC.cpp:11:
+./Grid.h:328:13: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < nzc - 1; k++) {
+            ^
+In file included from sputniPIC.cpp:26:
+In file included from ./MaxwellSolver.h:5:
+./Basic.h:160:7: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+      for ( int k = 0; k < nz; k++)
+      ^
+In file included from sputniPIC.cpp:11:
+./Grid.h:174:13: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+            for (int k = 1; k < nzn - 1; k++)
+            ^
+./Grid.h:294:13: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+            for (int k = 1; k < nzc - 1; k++) {
+            ^
+In file included from sputniPIC.cpp:26:
+In file included from ./MaxwellSolver.h:7:
+./CG.h:40:5: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+    for (int ii=0; ii < xkrylovlen; ii++){
+    ^
+./CG.h:98:9: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+        for ( int ii = 0; ii < xkrylovlen; ii++)
+        ^
+./CG.h:77:9: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+        for (int ii=0; ii < xkrylovlen; ii++)
+        ^
+./CG.h:71:9: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+        for (int ii=0; ii < xkrylovlen; ii++)
+        ^
+./CG.h:67:9: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+        for (int ii=0; ii < xkrylovlen; ii++)
+        ^
+./CG.h:62:9: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+        for (int ii=0; ii < xkrylovlen; ii++)
+        ^
+In file included from sputniPIC.cpp:26:
+./MaxwellSolver.h:402:13: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+            for (int k = 0; k < nzc; k++){
+            ^
+In file included from sputniPIC.cpp:26:
+In file included from ./MaxwellSolver.h:4:
+./TransArraySpace3D.h:8:9: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+        for ( int k=1; k < nz-1; k++)
+        ^
+./TransArraySpace3D.h:28:9: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+        for ( int k=1; k < nz-1; k++)
+        ^
+In file included from sputniPIC.cpp:15:
+In file included from ./InterpDens_aux.h:4:
+In file included from ./Smoothing.h:4:
+./BC.h:802:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < grd->nzc-1; k++){
+            ^
+./BC.h:811:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < grd->nzc - 1; k++){
+            ^
+./BC.h:885:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 0; k < grd->nzc; k++){
+            ^
+./BC.h:894:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 0; k < grd->nzc; k++){
+            ^
+In file included from sputniPIC.cpp:11:
+./Grid.h:556:13: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < nzc - 1; k++)
+            ^
+./Grid.h:232:13: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+            for (int k = 1; k < nzn - 1; k++) {
+            ^
+In file included from sputniPIC.cpp:26:
+In file included from ./MaxwellSolver.h:8:
+./GMRes.h:177:13: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+            for ( int l = 0; l < k; l++)
+            ^
+./GMRes.h:168:13: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+            for ( int l = i + 1; l <= k; l++)
+            ^
+In file included from sputniPIC.cpp:26:
+In file included from ./MaxwellSolver.h:5:
+./Basic.h:76:3: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+  for ( int i = 0; i < n; i++)
+  ^
+./Basic.h:10:3: remark: vectorized loop (vectorization width: 4, interleaved count: 4) [-Rpass=loop-vectorize]
+  for ( int i = 0; i < n; i++)
+  ^
+./Basic.h:76:3: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+  for ( int i = 0; i < n; i++)
+  ^
+./Basic.h:10:3: remark: vectorized loop (vectorization width: 4, interleaved count: 4) [-Rpass=loop-vectorize]
+  for ( int i = 0; i < n; i++)
+  ^
+./Basic.h:76:3: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+  for ( int i = 0; i < n; i++)
+  ^
+./Basic.h:76:3: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+./Basic.h:76:3: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+./Basic.h:87:3: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+  for ( int i = 0; i < n; i++)
+  ^
+In file included from sputniPIC.cpp:26:
+In file included from ./MaxwellSolver.h:4:
+./TransArraySpace3D.h:16:9: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+        for ( int k=1; k < nz-1; k++){
+        ^
+In file included from sputniPIC.cpp:26:
+In file included from ./MaxwellSolver.h:5:
+./Basic.h:297:7: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+      for ( int k = 0; k < nz; k++)
+      ^
+./Basic.h:297:7: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+./Basic.h:297:7: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+In file included from sputniPIC.cpp:11:
+./Grid.h:404:13: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < nzn - 1; k++) {
+            ^
+In file included from sputniPIC.cpp:26:
+In file included from ./MaxwellSolver.h:5:
+./Basic.h:178:7: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+      for ( int k = 0; k < nz; k++)
+      ^
+./Basic.h:103:7: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+      for ( int k = 0; k < nz; k++)
+      ^
+./Basic.h:185:3: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+  #pragma omp parallel for
+  ^
+./Basic.h:212:3: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+  #pragma omp parallel for
+  ^
+./Basic.h:146:3: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+  #pragma omp parallel for
+  ^
+In file included from sputniPIC.cpp:26:
+./MaxwellSolver.h:160:13: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+            for (int k = 0; k < nzn; k++){
+            ^
+In file included from sputniPIC.cpp:15:
+In file included from ./InterpDens_aux.h:4:
+In file included from ./Smoothing.h:4:
+./BC.h:270:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < grd->nzn-1; k++){
+            ^
+./BC.h:279:13: remark: vectorized loop (vectorization width: 8, interleaved count: 2) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < grd->nzn - 1; k++){
+            ^
+./BC.h:353:13: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+            for ( int k = 0; k < grd->nzn; k++){
+            ^
+./BC.h:362:13: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+            for ( int k = 0; k < grd->nzn; k++){
+            ^
+In file included from sputniPIC.cpp:26:
+./MaxwellSolver.h:205:17: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+                for (int k = 0; k < nzn; k++) {
+                ^
+In file included from sputniPIC.cpp:11:
+./Grid.h:528:13: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < nzn - 1; k++)
+            ^
+In file included from sputniPIC.cpp:26:
+In file included from ./MaxwellSolver.h:5:
+./Basic.h:126:7: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+      for ( int k = 0; k < nz; k++)
+      ^
+./Basic.h:230:7: remark: vectorized loop (vectorization width: 8, interleaved count: 4) [-Rpass=loop-vectorize]
+      for ( int k = 0; k < nz; k++) {
+      ^
+In file included from sputniPIC.cpp:11:
+./Grid.h:446:13: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+            for ( int k = 1; k < nzc - 1; k++) {
+            ^
+./Grid.h:190:13: remark: vectorized loop (vectorization width: 8, interleaved count: 1) [-Rpass=loop-vectorize]
+            for (int k = 1; k < nzn - 1; k++)
+            ^
+In file included from sputniPIC.cpp:9:
+In file included from ./Parameters.h:5:
+/usr/local/opt/llvm/bin/../include/c++/v1/string:2074:5: remark: vectorized loop (vectorization width: 32, interleaved count: 4) [-Rpass=loop-vectorize]
+    for (; __first != __last; ++__first, (void) ++__p)
+    ^
+/usr/local/opt/llvm/bin/../include/c++/v1/string:2074:5: remark: vectorized loop (vectorization width: 32, interleaved count: 4) [-Rpass=loop-vectorize]
